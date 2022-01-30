@@ -23,7 +23,7 @@ export function showYouKnow(): void {
 export function sayHello(): string {
   logging.log("sayHello() was called");
 
-  return "Goodbye!";
+  return "Hello!";
 }
 
 /**
@@ -37,7 +37,7 @@ export function sayHello(): string {
 export function sayMyName(): string {
   logging.log("sayMyName() was called");
 
-  return "Hello " + context.contractName + "!";
+  return "Hello, " + context.sender + "!";
 }
 
 /**
@@ -52,7 +52,7 @@ export function sayMyName(): string {
 export function saveMyName(): void {
   logging.log("saveMyName() was called");
 
-  storage.setString("sendr", context.sender);
+  storage.setString("sender", context.sender);
 }
 
 /**
