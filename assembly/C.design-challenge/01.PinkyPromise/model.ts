@@ -1,4 +1,4 @@
-import {context, PersistentVector} from 'near-sdk-as';
+import {context, PersistentVector, PersistentMap} from 'near-sdk-as';
 
 @nearBindgen
 export class PinkyPromise {
@@ -10,4 +10,4 @@ export class PinkyPromise {
     }
 }
 
-export const pinky_promises = new PersistentVector<PinkyPromise>("pp");
+export const promises_mapping = new PersistentMap<string, PersistentVector<PinkyPromise>>("p_from");
